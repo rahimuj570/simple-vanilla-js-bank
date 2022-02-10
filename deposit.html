@@ -14,16 +14,22 @@
       </h1>
       <div class="text-center mt-20 mx-20 info grid grid-cols-3 gap-x-20">
         <div class="depositCard rounded-full bg-green-100 p-5">
-          <h2 class="text-2xl">Deposite</h2>
-          <h1 class="text-4xl font-semibold">$0</h1>
+          <h2 class="text-2xl">Deposit</h2>
+          <h1 class="text-4xl font-semibold">
+            $<span id="depoAmount">0</span>
+          </h1>
         </div>
-        <div class="withdrawCard rounded-full bg-orange-100 p-5">
+        <div class="rounded-full bg-orange-100 p-5">
           <h2 class="text-2xl">Withdraw</h2>
-          <h1 class="text-4xl font-semibold">$0</h1>
+          <h1 class="text-4xl font-semibold">
+            $<span id="withdrawCard">0</span>
+          </h1>
         </div>
-        <div class="totalCard rounded-full bg-yellow-100 p-5">
+        <div class="rounded-full bg-yellow-100 p-5">
           <h2 class="text-2xl">Total</h2>
-          <h1 class="text-4xl font-semibold">$0</h1>
+          <h1 class="text-4xl font-semibold">
+            $<span class="totalCard">0</span>
+          </h1>
         </div>
       </div>
     </header>
@@ -34,10 +40,11 @@
       >
         <input
           placeholder="Amount of Deposit $"
-          class="mb-3 email-field px-2 py-1 block my-1 w-3/4 border-2 border-sky-50"
+          class="mb-3 depo-field px-2 py-1 block my-1 w-3/4 border-2 border-sky-50"
           type="email"
         />
         <button
+          onclick="depositBtn()"
           class="deposit-btn py-2 px-4 bg-blue-500 text-white font-semibold rounded-full shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
         >
           Deposit
@@ -48,10 +55,11 @@
       >
         <input
           placeholder="Amount of Withdraw $"
-          class="mb-3 email-field px-2 py-1 block my-1 w-3/4 border-2 border-sky-50"
+          class="mb-3 withdraw-field px-2 py-1 block my-1 w-3/4 border-2 border-sky-50"
           type="email"
         />
         <button
+          onclick="withdrawBtn()"
           class="withdraw-btn py-2 px-4 bg-pink-500 text-white font-semibold rounded-full shadow-md hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-opacity-75"
         >
           Withdraw
