@@ -1,1 +1,1 @@
-"# simple-vanilla-js-bank" 
+"# simple-vanilla-js-bank"
